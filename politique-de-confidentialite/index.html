@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — McBroue Resto-Pub</title>
+<meta name="description" content="Politique de confidentialité du McBroue Resto-Pub à Salaberry-de-Valleyfield, conforme à la Loi 25 du Québec. Protection de vos renseignements personnels.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mcbroue.com/politique-de-confidentialite/">
+<meta name="theme-color" content="#0A0A0A">
+
+<!-- ─── Google Consent Mode v2 — défaut "denied" (Loi 25) ─── -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- ─── Google Analytics 4 ─── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GR8496923"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-9GR8496923', { 'anonymize_ip': true });
+</script>
+
+<!-- ─── CookieConsent (Loi 25) ─── -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+<script type="module" src="/js/cookieconsent-config.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#000000;--char:#0A0A0A;--char-2:#141514;--surface:#1C1E1D;--card:#222423;
+  --steel-hi:#DCE0E0;--steel:#8E9698;--steel-mid:#6B7271;--steel-low:#4A4E4D;
+  --gold:#C9A06E;--gold-hi:#DDB984;--gold-deep:#9A6B3D;
+  --text:#EDEEEC;--text-mut:#A9AFA9;--text-dim:#6B716D;
+  --border:rgba(142,150,152,0.13);--border-gold:rgba(201,160,110,0.30);
+  --font-display:'Anton',Impact,sans-serif;--font-ui:'Oswald',sans-serif;--font-body:'Libre Franklin',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--char)}
+::-webkit-scrollbar-thumb{background:var(--steel-low)}::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+::selection{background:var(--gold);color:var(--black)}
+
+/* ════════ NAV ════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(0,0,0,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;height:42px}
+.nav-logo img{height:100%;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links > li{position:relative}
+.nav-links a,.nav-links .nav-trigger{font-family:var(--font-ui);font-size:.82rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mut);text-decoration:none;transition:color .25s;position:relative;padding:.3rem 0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}
+.nav-links a::after,.nav-links .nav-trigger::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav-links a:hover,.nav-links .nav-trigger:hover{color:var(--text)}
+.nav-links a:hover::after,.nav-links .nav-trigger:hover::after,.nav-links li:hover > .nav-trigger::after{width:100%}
+.nav-trigger .caret{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .25s}
+.nav-links li:hover .nav-trigger .caret{transform:rotate(225deg);margin-top:3px}
+.nav-dropdown{position:absolute;top:calc(100% + .8rem);left:50%;transform:translateX(-50%) translateY(-8px);min-width:260px;background:rgba(15,13,10,.97);backdrop-filter:blur(14px);border:1px solid var(--border);border-top:2px solid var(--gold);padding:.6rem 0;list-style:none;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.nav-dropdown::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(45deg);width:14px;height:14px;background:rgba(15,13,10,.97);border-left:1px solid var(--gold);border-top:1px solid var(--gold)}
+.nav-links li:hover .nav-dropdown,.nav-links li.force-open .nav-dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-dropdown li{display:block}
+.nav-dropdown a{display:block;padding:.85rem 1.5rem;font-size:.74rem;letter-spacing:.18em;color:var(--text-mut)!important;border-left:2px solid transparent;transition:all .2s}
+.nav-dropdown a::after{display:none}
+.nav-dropdown a:hover{color:var(--gold)!important;background:rgba(201,169,110,.06);border-left-color:var(--gold);padding-left:1.8rem}
+.nav-dropdown .nav-d-eyebrow{display:block;font-family:var(--font-ui);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:.7rem 1.5rem .3rem;border-bottom:1px solid var(--border);margin-bottom:.4rem}
+.nav-dropdown .nav-d-sub{display:block;font-size:.62rem;letter-spacing:.06em;color:var(--text-dim);text-transform:none;font-family:var(--font-body);font-style:italic;margin-top:.25rem;line-height:1.3}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-social{display:flex;gap:.9rem}
+.nav-social a{color:var(--text-mut);transition:color .25s,transform .25s;display:flex}
+.nav-social a:hover{color:var(--gold);transform:translateY(-2px)}
+.nav-social svg{width:18px;height:18px;fill:currentColor}
+.btn-reserve{font-family:var(--font-ui);font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);background:transparent;padding:.65rem 1.5rem;text-decoration:none;border:1px solid var(--gold-deep);cursor:pointer;position:relative;overflow:hidden;transition:transform .25s,color .25s,border-color .25s}
+.btn-reserve::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold),var(--gold-deep));opacity:0;transition:opacity .25s;z-index:0}
+.btn-reserve:hover{transform:translateY(-2px);color:var(--black);border-color:var(--gold)}
+.btn-reserve:hover::before{opacity:1}
+.btn-reserve span{position:relative;z-index:1}
+.burger-menu{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.4rem;z-index:1002;position:relative}
+.burger-menu span{width:26px;height:2px;background:var(--text);transition:.3s;transform-origin:center}
+.burger-menu.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger-menu.is-open span:nth-child(2){opacity:0}
+.burger-menu.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:999;background:rgba(15,13,10,.98);backdrop-filter:blur(16px);opacity:0;pointer-events:none;transition:opacity .3s;display:flex;flex-direction:column;padding:6rem 2rem 2rem;overflow-y:auto}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu ul{list-style:none}
+.mm-item,.mm-trigger{display:flex;justify-content:space-between;align-items:center;width:100%;padding:1.2rem 0;border-bottom:1px solid var(--border);font-family:var(--font-ui);font-size:1.1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none;background:none;border-left:none;border-right:none;border-top:none;cursor:pointer;text-align:left}
+.mm-trigger .caret-m{width:10px;height:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .25s}
+.mm-trigger.open .caret-m{transform:rotate(-135deg)}
+.mm-submenu{max-height:0;overflow:hidden;transition:max-height .4s ease;list-style:none}
+.mm-submenu.open{max-height:400px}
+.mm-submenu a{display:block;padding:.9rem 1.2rem;font-family:var(--font-ui);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mut);text-decoration:none;border-bottom:1px solid var(--border)}
+.mm-submenu a:hover{color:var(--gold)}
+.mm-submenu .mm-sub{display:block;font-family:var(--font-body);font-size:.7rem;letter-spacing:.02em;color:var(--text-dim);text-transform:none;font-style:italic;margin-top:.3rem}
+.mm-footer{margin-top:auto;padding-top:2rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.mm-footer a{font-family:var(--font-body);color:var(--text-mut);text-decoration:none;font-size:.95rem}
+.mm-footer .mm-tel{font-family:var(--font-display);font-size:1.6rem;color:var(--gold)}
+
+/* ════════ POLICY CONTENT ════════ */
+.policy-wrap{max-width:820px;margin:0 auto;padding:8rem 2rem 5rem}
+.policy-header{text-align:center;padding-bottom:2.5rem;margin-bottom:3rem;border-bottom:1px solid var(--border)}
+.policy-eyebrow{font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:inline-flex;align-items:center;gap:.9rem}
+.policy-eyebrow::before,.policy-eyebrow::after{content:'';width:34px;height:1px;background:var(--gold-deep)}
+.policy-header h1{font-family:var(--font-display);font-size:clamp(2.3rem,5vw,3.8rem);text-transform:uppercase;letter-spacing:.01em;line-height:1.05;color:var(--text);margin-bottom:.8rem}
+.policy-header h1 .gold{color:var(--gold)}
+.policy-header .update{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim);margin-top:1rem;display:inline-block}
+
+.policy-content h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.8vw,2rem);text-transform:uppercase;letter-spacing:.01em;color:var(--text);margin:3rem 0 1rem;padding-top:2rem;border-top:1px solid var(--border);line-height:1.1}
+.policy-content h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.policy-content h2 .num{color:var(--gold);font-weight:400;margin-right:.4rem}
+.policy-content h3{font-family:var(--font-ui);font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:1.8rem 0 .6rem}
+.policy-content p{margin-bottom:1.1rem;color:var(--text-mut);line-height:1.75;font-size:1rem}
+.policy-content p strong{color:var(--text);font-weight:500}
+.policy-content a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.policy-content a:hover{color:var(--gold-hi)}
+.policy-content ul{margin:.6rem 0 1.3rem 0;list-style:none;padding-left:0}
+.policy-content ul li{position:relative;padding-left:1.3rem;margin-bottom:.6rem;color:var(--text-mut);line-height:1.65}
+.policy-content ul li::before{content:'';position:absolute;left:0;top:.65rem;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.policy-content ul li strong{color:var(--text);font-weight:500}
+
+.info-card{background:var(--char-2);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.4rem 1.6rem;margin:1.5rem 0}
+.info-card p{margin-bottom:.4rem;font-style:normal;color:var(--text-mut)}
+.info-card p:last-child{margin-bottom:0}
+.info-card p strong{color:var(--text);font-weight:500}
+
+table{width:100%;border-collapse:collapse;margin:1.2rem 0 2rem;font-size:.9rem;border:1px solid var(--border)}
+thead{background:var(--char-2)}
+th{padding:.85rem .9rem;text-align:left;font-family:var(--font-ui);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);border-bottom:1px solid var(--border-gold)}
+td{padding:.75rem .9rem;border-bottom:1px solid var(--border);color:var(--text-mut)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--char-2)}
+code{font-family:'Courier New',monospace;font-size:.82em;color:var(--gold-hi);background:var(--surface);padding:.2em .5em;border-radius:2px;border:1px solid var(--border)}
+
+.consent-btn{display:inline-block;margin-top:.5rem;padding:.85rem 1.7rem;background:linear-gradient(135deg,var(--gold-hi),var(--gold));color:var(--black);border:none;font-family:var(--font-ui);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 6px 24px rgba(154,107,61,.35)}
+.consent-btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(154,107,61,.5);color:var(--black)}
+
+/* ════════ FOOTER ════════ */
+footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2.5rem 2rem;margin-top:4rem}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{height:70px;margin-bottom:1.4rem}
+.footer-logo img{height:100%;width:auto}
+.footer-about{font-size:.95rem;color:var(--text-mut);line-height:1.7;max-width:340px}
+.footer-col h4{font-family:var(--font-ui);font-size:.85rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem}
+.footer-col a,.footer-col p{display:block;font-size:.95rem;color:var(--text-mut);text-decoration:none;margin-bottom:.7rem;transition:color .25s;line-height:1.5}
+.footer-col a:hover{color:var(--gold)}
+.footer-hours span{display:flex;justify-content:space-between;gap:1rem;font-size:.9rem;color:var(--text-mut);margin-bottom:.5rem}
+.footer-hours span strong{color:var(--text);font-weight:500}
+.footer-social{display:flex;gap:1rem;margin-top:1.4rem}
+.footer-social a{width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-mut);transition:.25s}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.footer-social svg{width:18px;height:18px;fill:currentColor}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--font-ui);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim)}
+.footer-bottom a{color:var(--text-dim);text-decoration:underline;text-underline-offset:3px}
+.footer-bottom a:hover{color:var(--gold)}
+
+@media(max-width:960px){
+  .nav-links{display:none}
+  .burger-menu{display:flex}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .policy-wrap{padding:7rem 1.3rem 3rem}
+  table{font-size:.82rem}
+  th,td{padding:.55rem .65rem}
+}
+@media(max-width:560px){
+  nav{padding:.8rem 1.3rem}
+  .nav-social{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  table{font-size:.78rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav id="nav">
+  <a href="/" class="nav-logo" aria-label="McBroue — Accueil"><img src="/assets/logo-mcbroue.png" alt="McBroue Resto-Pub"></a>
+  <ul class="nav-links">
+    <li><a href="/#endroit">L'endroit</a></li>
+    <li>
+      <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></button>
+      <ul class="nav-dropdown" role="menu">
+        <li><span class="nav-d-eyebrow">Au McBroue</span></li>
+        <li><a href="/menu/" role="menuitem">Menu Resto<span class="nav-d-sub">Burgers, poutines, viandes, cocktails</span></a></li>
+        <li><a href="/midi/" role="menuitem">Menu du midi<span class="nav-d-sub">Lundi au vendredi · le menu du jour</span></a></li>
+        <li><span class="nav-d-eyebrow" style="margin-top:.4rem">À emporter / Événements</span></li>
+        <li><a href="/traiteur/" role="menuitem">Menu Traiteur<span class="nav-d-sub">Buffets, boîtes à lunch, sandwichs</span></a></li>
+      </ul>
+    </li>
+    <li><a href="/salles/">Salles &amp; événements</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://www.facebook.com/pages/category/Bar---Grill/Resto-Pub-McBroue-106238549404912/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/mcbroue/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+    <a href="tel:+14503710770" class="btn-reserve"><span>Réserver</span></a>
+  </div>
+  <button class="burger-menu" id="burgerBtn" aria-label="Menu" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navigation">
+  <ul>
+    <li><a class="mm-item" href="/#endroit">L'endroit</a></li>
+    <li>
+      <button class="mm-trigger">Menu <span class="caret-m"></span></button>
+      <ul class="mm-submenu">
+        <li><a href="/menu/">Menu Resto<span class="mm-sub">Burgers, poutines, viandes, cocktails</span></a></li>
+        <li><a href="/midi/">Menu du midi<span class="mm-sub">Lundi au vendredi · le menu du jour</span></a></li>
+        <li><a href="/traiteur/">Menu Traiteur<span class="mm-sub">Buffets, boîtes à lunch, sandwichs</span></a></li>
+      </ul>
+    </li>
+    <li><a class="mm-item" href="/salles/">Salles &amp; événements</a></li>
+    <li><a class="mm-item" href="/#contact">Contact</a></li>
+  </ul>
+  <div class="mm-footer">
+    <a class="mm-tel" href="tel:+14503710770">(450) 371-0770</a>
+    <a href="mailto:info@mcbroue.com">info@mcbroue.com</a>
+  </div>
+</div>
+
+<!-- ════════ CONTENU ════════ -->
+<div class="policy-wrap">
+
+  <header class="policy-header">
+    <div class="policy-eyebrow">Loi 25 — Québec</div>
+    <h1>Politique de<br><span class="gold">confidentialité</span></h1>
+    <span class="update">Dernière mise à jour — Juin 2026</span>
+  </header>
+
+  <div class="policy-content">
+
+    <h2><span class="num">01.</span>Introduction</h2>
+    <p>
+      Le McBroue Resto-Pub (ci-après « McBroue », « nous ») s'engage à protéger les renseignements
+      personnels de ses clients et visiteurs, conformément à la <strong>Loi modernisant des dispositions
+      législatives en matière de protection des renseignements personnels</strong> (L.Q. 2021, c. 25,
+      ci-après « Loi 25 ») du Québec.
+    </p>
+    <p>
+      La présente politique décrit quels renseignements nous recueillons, pourquoi nous les
+      recueillons, comment nous les utilisons et les droits dont vous disposez à leur égard.
+    </p>
+
+    <h2><span class="num">02.</span>Responsable de la protection des renseignements personnels</h2>
+    <p>
+      Conformément à la Loi 25, nous avons désigné un responsable de la protection des
+      renseignements personnels :
+    </p>
+    <div class="info-card">
+      <p><strong>Jonathan Provost</strong></p>
+      <p>Responsable de la protection des renseignements personnels</p>
+      <p>Courriel : <a href="mailto:security@bunkers.co">security@bunkers.co</a></p>
+    </div>
+
+    <h2><span class="num">03.</span>Renseignements personnels recueillis</h2>
+
+    <h3>3.1 Demandes de contact et de devis traiteur</h3>
+    <p>
+      Lorsque vous nous contactez par téléphone, par courriel ou via nos formulaires (demande
+      de devis traiteur, réservation d'événement, demande d'information), nous recueillons :
+    </p>
+    <ul>
+      <li>Prénom et nom</li>
+      <li>Adresse courriel</li>
+      <li>Numéro de téléphone</li>
+      <li>Détails de votre événement ou demande (date, nombre de personnes, préférences alimentaires)</li>
+    </ul>
+    <p>
+      <strong>Finalité :</strong> ces données servent uniquement à vous répondre, vous transmettre
+      un devis, gérer votre événement ou votre demande, et vous contacter en cas de modification.
+      Elles ne sont pas utilisées à des fins de marketing, sauf consentement exprès de votre part.
+    </p>
+
+    <h3>3.2 Réservations de table</h3>
+    <p>
+      Le McBroue ne dispose pas de système de réservation en ligne. Les réservations sont prises
+      par téléphone au <a href="tel:+14503710770">(450) 371-0770</a>. Nous ne consignons que les
+      informations strictement nécessaires (nom, téléphone, date, heure, nombre de personnes) et
+      ces données sont supprimées après votre passage.
+    </p>
+
+    <h3>3.3 Données de navigation (Google Analytics)</h3>
+    <p>
+      Avec votre consentement, notre site utilise Google Analytics 4, un service d'analyse Web
+      de Google LLC. Les données recueillies comprennent :
+    </p>
+    <ul>
+      <li>Pages consultées et durée des visites</li>
+      <li>Source de la visite (moteur de recherche, lien direct, réseau social)</li>
+      <li>Type d'appareil, navigateur et système d'exploitation</li>
+      <li>Localisation approximative (ville/région)</li>
+      <li>Adresse IP anonymisée</li>
+    </ul>
+    <p>
+      <strong>Important :</strong> sans votre consentement explicite, Google Analytics fonctionne
+      en mode « cookieless ping » — aucun témoin n'est déposé sur votre appareil et seules des
+      données agrégées et anonymes sont transmises. Si vous acceptez, des témoins persistants
+      permettent un suivi plus précis (visiteurs uniques, retours).
+    </p>
+
+    <h2><span class="num">04.</span>Témoins de connexion (cookies)</h2>
+    <p>Notre site utilise les témoins suivants :</p>
+
+    <table>
+      <thead>
+        <tr><th>Nom</th><th>Catégorie</th><th>Finalité</th><th>Durée</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>cc_cookie</code></td>
+          <td>Essentiel</td>
+          <td>Enregistre vos choix de consentement</td>
+          <td>6 mois</td>
+        </tr>
+        <tr>
+          <td><code>_ga</code></td>
+          <td>Analyse</td>
+          <td>Identifiant anonyme — Google Analytics</td>
+          <td>2 ans</td>
+        </tr>
+        <tr>
+          <td><code>_ga_*</code></td>
+          <td>Analyse</td>
+          <td>État de session — Google Analytics 4</td>
+          <td>2 ans</td>
+        </tr>
+        <tr>
+          <td><code>_gid</code></td>
+          <td>Analyse</td>
+          <td>Identifiant de session — Google Analytics</td>
+          <td>24 heures</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Vous pouvez modifier vos préférences en tout temps :</p>
+    <button class="consent-btn" type="button" data-cc="show-preferencesModal">
+      Gérer mes préférences de témoins
+    </button>
+    <p style="margin-top:1.4rem">
+      Vous pouvez également désactiver Google Analytics via le
+      <a href="https://tools.google.com/dlpage/gaoptout?hl=fr" target="_blank" rel="noopener">module de navigateur de Google</a>.
+    </p>
+
+    <h2><span class="num">05.</span>Utilisation et conservation</h2>
+    <p>
+      Vos renseignements sont utilisés exclusivement aux fins pour lesquelles ils ont été
+      recueillis. <strong>Nous ne vendons, ne louons ni ne partageons vos données avec des tiers
+      à des fins commerciales.</strong>
+    </p>
+    <p>
+      Les données de demandes de contact et de devis traiteur sont conservées pour la durée
+      nécessaire au traitement de votre demande et à nos obligations légales (notamment fiscales),
+      puis détruites ou anonymisées. Les données Google Analytics sont conservées 14 mois, puis
+      automatiquement supprimées.
+    </p>
+
+    <h2><span class="num">06.</span>Localisation et transmission des données</h2>
+
+    <h3>6.1 Hébergement du site</h3>
+    <p>
+      Ce site est hébergé via un fournisseur d'hébergement web utilisant un réseau de diffusion
+      de contenu (CDN) mondial. Les fichiers statiques du site peuvent transiter par des serveurs
+      situés hors du Canada. Aucune donnée personnelle n'est stockée par l'hébergeur dans le cadre
+      de la diffusion de ce site.
+    </p>
+
+    <h3>6.2 Google Analytics</h3>
+    <p>
+      Les données recueillies par Google Analytics sont transmises vers les serveurs de Google,
+      qui peuvent être situés aux États-Unis ou dans d'autres pays. Ce transfert n'a lieu que
+      si vous avez consenti aux témoins d'analyse. Google applique des mesures de protection
+      incluant le chiffrement en transit et au repos, ainsi que l'anonymisation des adresses IP.
+    </p>
+
+    <h3>6.3 Courriels et communications</h3>
+    <p>
+      Les courriels que vous nous envoyez (info@mcbroue.com) transitent par notre fournisseur
+      de courriel et peuvent être conservés sur ses serveurs. Nous limitons la conservation
+      au strict nécessaire au traitement de votre demande.
+    </p>
+
+    <h2><span class="num">07.</span>Mesures de sécurité</h2>
+    <p>
+      Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour
+      protéger vos renseignements personnels contre l'accès non autorisé, la perte, la
+      modification ou la divulgation :
+    </p>
+    <ul>
+      <li><strong>Chiffrement SSL/TLS</strong> — toutes les communications entre votre navigateur et notre site sont chiffrées via HTTPS</li>
+      <li><strong>Contrôle d'accès</strong> — l'accès aux données de contact est restreint aux membres autorisés de l'équipe du McBroue</li>
+      <li><strong>Consentement préalable</strong> — aucun témoin d'analyse n'est déposé sans votre autorisation explicite (Google Consent Mode v2)</li>
+      <li><strong>Minimisation des données</strong> — nous ne recueillons que les renseignements strictement nécessaires aux finalités décrites</li>
+      <li><strong>Hébergement sécurisé</strong> — infrastructure avec certificats SSL automatiques et protection DDoS</li>
+    </ul>
+    <p>
+      Aucun système n'est infaillible. Malgré nos efforts, nous ne pouvons garantir une
+      sécurité absolue. En cas d'incident, nous agirons conformément à la section 9 ci-dessous.
+    </p>
+
+    <h2><span class="num">08.</span>Vos droits</h2>
+    <p>Conformément à la Loi 25, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Accès</strong> — demander quels renseignements personnels nous détenons à votre sujet</li>
+      <li><strong>Rectification</strong> — demander la correction de renseignements inexacts ou incomplets</li>
+      <li><strong>Suppression</strong> — demander l'effacement de vos données lorsque la finalité de la collecte est atteinte</li>
+      <li><strong>Retrait du consentement</strong> — retirer votre consentement aux témoins d'analyse en tout temps via la bannière ou le lien dans le pied de page</li>
+      <li><strong>Portabilité</strong> — recevoir vos données dans un format structuré et couramment utilisé</li>
+      <li><strong>Plainte</strong> — déposer une plainte auprès de la <a href="https://www.cai.gouv.qc.ca/" target="_blank" rel="noopener">Commission d'accès à l'information du Québec (CAI)</a></li>
+    </ul>
+    <p>
+      Pour exercer vos droits : <a href="mailto:security@bunkers.co">security@bunkers.co</a>.
+      Nous traiterons votre demande dans un délai de 30 jours suivant la réception.
+    </p>
+
+    <h2><span class="num">09.</span>Incident de confidentialité</h2>
+    <p>
+      En cas d'incident de confidentialité impliquant vos renseignements personnels et
+      susceptible de causer un préjudice sérieux, nous nous engageons à :
+    </p>
+    <ul>
+      <li>Prendre les mesures nécessaires pour réduire le risque de préjudice</li>
+      <li>Aviser la <strong>Commission d'accès à l'information du Québec</strong> dans les meilleurs délais</li>
+      <li>Aviser les personnes concernées avec une description de l'incident, les renseignements touchés et les mesures prises</li>
+      <li>Consigner l'incident dans un registre, conformément aux exigences de la Loi 25</li>
+    </ul>
+
+    <h2><span class="num">10.</span>Modifications à cette politique</h2>
+    <p>
+      Nous pouvons mettre à jour cette politique pour refléter des changements dans nos
+      pratiques ou la réglementation applicable. La date de la dernière mise à jour est
+      indiquée en haut de cette page. En cas de modification substantielle, nous en
+      informerons les utilisateurs par un avis visible sur le site.
+    </p>
+
+    <h2><span class="num">11.</span>Nous joindre</h2>
+    <div class="info-card">
+      <p><strong>McBroue Resto-Pub</strong></p>
+      <p>329, Rue Victoria · Salaberry-de-Valleyfield, QC J6T 1B3</p>
+      <p>Téléphone : <a href="tel:+14503710770">(450) 371-0770</a></p>
+      <p>Courriel général : <a href="mailto:info@mcbroue.com">info@mcbroue.com</a></p>
+      <p style="margin-top:.6rem">Responsable vie privée : <strong>Jonathan Provost</strong></p>
+      <p><a href="mailto:security@bunkers.co">security@bunkers.co</a></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo"><img src="/assets/logo-mcbroue.png" alt="McBroue Resto-Pub"></div>
+      <p class="footer-about">Le resto-pub de Valleyfield. Burgers, grillades, bières importées et la plus belle terrasse face au Vieux Canal de Beauharnois.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/pages/category/Bar---Grill/Resto-Pub-McBroue-106238549404912/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/mcbroue/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="/">Accueil</a>
+      <a href="/menu/">Menu Resto</a>
+      <a href="/midi/">Menu du midi</a>
+      <a href="/traiteur/">Service traiteur</a>
+      <a href="/salles/">Salles &amp; événements</a>
+    </div>
+    <div class="footer-col">
+      <h4>Coordonnées</h4>
+      <a href="https://maps.google.com/?q=329+Rue+Victoria+Salaberry-de-Valleyfield" target="_blank" rel="noopener">329 Rue Victoria<br>Salaberry-de-Valleyfield<br>QC J6T 1B3</a>
+      <a href="tel:+14503710770">(450) 371-0770</a>
+      <a href="mailto:info@mcbroue.com">info@mcbroue.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Heures</h4>
+      <div class="footer-hours">
+        <span>Lun–Mer<strong>11h – 21h</strong></span>
+        <span>Jeu–Sam<strong>11h – 22h</strong></span>
+        <span>Dimanche<strong>11h – 21h</strong></span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 McBroue Resto-Pub · 329 Rue Victoria, Salaberry-de-Valleyfield · <a href="/politique-de-confidentialite/">Confidentialité</a> · <a href="#" data-cc="show-preferencesModal">Gérer les témoins</a></span>
+    <span>Salaberry-de-Valleyfield · Montérégie</span>
+  </div>
+</footer>
+
+<script>
+const burgerBtn=document.getElementById('burgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+function toggleMobile(open){
+  if(open===undefined) open=!mobileMenu.classList.contains('open');
+  mobileMenu.classList.toggle('open',open);
+  burgerBtn.classList.toggle('is-open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+burgerBtn.addEventListener('click',()=>toggleMobile());
+mobileMenu.addEventListener('click',e=>{if(e.target===mobileMenu||e.target.closest('a:not(.mm-trigger)'))toggleMobile(false)});
+
+document.querySelectorAll('.nav-trigger').forEach(t=>{
+  t.addEventListener('click',e=>{
+    e.preventDefault();
+    const open=t.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.nav-trigger').forEach(o=>o.setAttribute('aria-expanded','false'));
+    t.setAttribute('aria-expanded',(!open).toString());
+    t.parentElement.classList.toggle('force-open',!open);
+  });
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.nav-links')){
+    document.querySelectorAll('.nav-trigger').forEach(t=>t.setAttribute('aria-expanded','false'));
+    document.querySelectorAll('.nav-links li').forEach(li=>li.classList.remove('force-open'));
+  }
+});
+document.querySelectorAll('.mm-trigger').forEach(t=>{
+  t.addEventListener('click',e=>{
+    e.preventDefault();
+    t.classList.toggle('open');
+    const panel=t.nextElementSibling;
+    if(panel) panel.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
