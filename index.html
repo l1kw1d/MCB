@@ -591,11 +591,11 @@ if(numEl){const obj={v:0};ScrollTrigger.create({trigger:numEl,start:'top 90%',on
 
 function tryFill(el,file,wrapSel){const img=new Image();img.onload=()=>{el.style.backgroundImage=`url('${file}')`;const w=el.closest(wrapSel);if(w)w.classList.add('filled')};img.src=file;}
 /* Hero auto-fill (silencieux si pas de photo : dégradé reste) */
-(function(){const heroBg=document.getElementById('heroBg');const img=new Image();img.onload=()=>{heroBg.style.setProperty('--hero-photo',`url('assets/hero.jpg')`);heroBg.classList.add('has-photo');};img.src='assets/hero.jpg';})();
-tryFill(document.getElementById('endroitImg'),'assets/traiteur-saumon.jpg','.img-ph');
-tryFill(document.getElementById('doorEat'),'assets/traiteur-poulet.jpg','.door');
-tryFill(document.getElementById('doorDrink'),'assets/traiteur-sandwichs.jpg','.door');
-tryFill(document.getElementById('doorVisit'),'assets/traiteur-crudites.jpg','.door');
+(function(){const heroBg=document.getElementById('heroBg');const img=new Image();img.onload=()=>{heroBg.style.setProperty('--hero-photo',`url('assets/HERO.JPG')`);heroBg.classList.add('has-photo');};img.src='assets/HERO.JPG';})();
+tryFill(document.getElementById('endroitImg'),'assets/endroit.jpg','.img-ph');
+tryFill(document.getElementById('doorEat'),'assets/MANGER.JPG','.door');
+tryFill(document.getElementById('doorDrink'),'assets/TRAITEUR-SANDWICHS.JPG','.door');
+tryFill(document.getElementById('doorVisit'),'assets/SALLES.JPG','.door');
 </script>
 </body>
 </html>
