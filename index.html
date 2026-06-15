@@ -1,23 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr-CA" prefix="og: https://ogp.me/ns#">
 <head>
+<!-- ─── Google Consent Mode v2 — défaut "denied" (Loi 25) ─── -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- ─── Google Analytics 4 ─── -->
+<!-- TODO : remplacer G-XXXXXXXXXX par le vrai ID GA4 du McBroue -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true
+  });
+</script>
+
+<!-- ─── CookieConsent (orestbida/cookieconsent v3) ─── -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+<script type="module" src="/js/cookieconsent-config.js"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>McBroue Resto-Pub | Le pub du canal — Salaberry-de-Valleyfield</title>
-<meta name="description" content="McBroue Resto-Pub à Salaberry-de-Valleyfield : burgers spécialisés, viandes grillées, bières importées et la plus belle terrasse chauffée face au Vieux Canal de Beauharnois. Bâtiment centenaire, ambiance festive. Réservez au (450) 371-0770.">
-<meta name="keywords" content="pub Valleyfield, burger Valleyfield, resto-pub Salaberry-de-Valleyfield, terrasse canal Beauharnois, bar Suroît, McBroue, traiteur Valleyfield">
-<meta name="robots" content="index, follow">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#0A0A0A">
+
+<title>McBroue Resto-Pub | Burgers, bières et terrasse sur le canal à Salaberry-de-Valleyfield</title>
+<meta name="description" content="McBroue Resto-Pub à Salaberry-de-Valleyfield : burgers spécialisés, viandes grillées, bières importées et la plus belle terrasse chauffée face au Vieux Canal de Beauharnois. Bâtiment centenaire, ambiance festive. Service traiteur. Réservez au (450) 371-0770.">
+<meta name="keywords" content="pub Valleyfield, burger Valleyfield, resto-pub Salaberry-de-Valleyfield, terrasse canal Beauharnois, bar Suroît, McBroue, traiteur Valleyfield, restaurant Valleyfield, 5 à 7 Valleyfield, sortie en groupe Valleyfield, bières importées Valleyfield, terrasse été Valleyfield, party de bureau Valleyfield">
+<meta name="author" content="McBroue Resto-Pub">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="language" content="fr-CA">
 <link rel="canonical" href="https://mcbroue.com/">
 <meta name="geo.region" content="CA-QC">
 <meta name="geo.placename" content="Salaberry-de-Valleyfield, Québec">
+<meta name="geo.position" content="45.2515;-74.1295">
+<meta name="ICBM" content="45.2515, -74.1295">
+
+<!-- ─── Open Graph ─── -->
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="McBroue Resto-Pub">
-<meta property="og:title" content="McBroue Resto-Pub | Le pub du canal">
-<meta property="og:description" content="Burgers, grillades, bières importées et la plus belle terrasse face au canal. Bâtiment centenaire, ambiance festive à Valleyfield.">
+<meta property="og:title" content="McBroue Resto-Pub — Le pub du canal à Valleyfield">
+<meta property="og:description" content="Burgers, grillades, bières importées et la plus belle terrasse face au Vieux Canal. Bâtiment centenaire, ambiance festive à Salaberry-de-Valleyfield.">
+<meta property="og:url" content="https://mcbroue.com/">
+<meta property="og:image" content="https://mcbroue.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="McBroue Resto-Pub — Salaberry-de-Valleyfield, terrasse sur le canal">
 <meta property="og:locale" content="fr_CA">
+<meta property="og:phone_number" content="+14503710770">
+<meta property="og:street-address" content="329 Rue Victoria">
+<meta property="og:locality" content="Salaberry-de-Valleyfield">
+<meta property="og:region" content="QC">
+<meta property="og:postal-code" content="J6T 1B3">
+<meta property="og:country-name" content="Canada">
 
+<!-- ─── Twitter ─── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="McBroue Resto-Pub — Le pub du canal à Valleyfield">
+<meta name="twitter:description" content="Burgers, grillades, bières importées et la plus belle terrasse face au Vieux Canal. Bâtiment centenaire, ambiance festive.">
+<meta name="twitter:image" content="https://mcbroue.com/og-image.png">
+
+<!-- ─── Schema.org Restaurant ─── -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"McBroue Resto-Pub","servesCuisine":["Pub","Burgers","Grillades"],"priceRange":"$$","telephone":"+14503710770","email":"info@mcbroue.com","address":{"@type":"PostalAddress","streetAddress":"329 Rue Victoria","addressLocality":"Salaberry-de-Valleyfield","addressRegion":"QC","postalCode":"J6T 1B3","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Sunday"],"opens":"11:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"11:00","closes":"22:00"}],"url":"https://mcbroue.com/"}
+{"@context":"https://schema.org","@type":"Restaurant","@id":"https://mcbroue.com/#restaurant","name":"McBroue Resto-Pub","alternateName":"McBroue","description":"Resto-pub centenaire à Salaberry-de-Valleyfield. Burgers spécialisés, viandes grillées, bières importées et terrasse chauffée face au Vieux Canal de Beauharnois.","url":"https://mcbroue.com/","telephone":"+14503710770","email":"info@mcbroue.com","image":"https://mcbroue.com/og-image.png","logo":"https://mcbroue.com/assets/logo-mcbroue.png","priceRange":"$$","servesCuisine":["Pub","Burgers","Grillades","Cuisine québécoise"],"currenciesAccepted":"CAD","paymentAccepted":"Cash, Credit Card, Debit Card","hasMap":"https://maps.google.com/?q=329+Rue+Victoria+Salaberry-de-Valleyfield+QC","address":{"@type":"PostalAddress","streetAddress":"329 Rue Victoria","addressLocality":"Salaberry-de-Valleyfield","addressRegion":"QC","postalCode":"J6T 1B3","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":45.2515,"longitude":-74.1295},"areaServed":[{"@type":"City","name":"Salaberry-de-Valleyfield"},{"@type":"City","name":"Beauharnois"},{"@type":"City","name":"Châteauguay"},{"@type":"City","name":"Vaudreuil-Dorion"},{"@type":"City","name":"Coteau-du-Lac"},{"@type":"City","name":"Saint-Zotique"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Sunday"],"opens":"11:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday"],"opens":"11:00","closes":"22:00"}],"acceptsReservations":true,"sameAs":["https://www.facebook.com/pages/category/Bar---Grill/Resto-Pub-McBroue-106238549404912/","https://www.instagram.com/mcbroue/"],"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Terrasse chauffée","value":true},{"@type":"LocationFeatureSpecification","name":"Vue sur le canal","value":true},{"@type":"LocationFeatureSpecification","name":"Service traiteur","value":true},{"@type":"LocationFeatureSpecification","name":"Groupes","value":true}],"keywords":"pub Valleyfield, burger Valleyfield, terrasse canal Beauharnois, traiteur Valleyfield, bières importées"}
+</script>
+
+<!-- ─── Schema.org FAQ ─── -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Où est situé le McBroue?","acceptedAnswer":{"@type":"Answer","text":"Au 329, Rue Victoria à Salaberry-de-Valleyfield, dans un bâtiment centenaire face au Vieux Canal de Beauharnois."}},{"@type":"Question","name":"Quelles sont les heures d'ouverture?","acceptedAnswer":{"@type":"Answer","text":"Lundi au mercredi et dimanche : 11h à 21h. Jeudi au samedi : 11h à 22h."}},{"@type":"Question","name":"Y a-t-il une terrasse?","acceptedAnswer":{"@type":"Answer","text":"Oui, une magnifique terrasse chauffée face au Vieux Canal de Beauharnois — la plus belle vue en ville. Les bateaux s'y accostent par dizaines durant la belle saison."}},{"@type":"Question","name":"Offrez-vous un service traiteur?","acceptedAnswer":{"@type":"Answer","text":"Oui. Buffets froids et chauds, boîtes à lunch, soupers spaghetti — pour groupes, événements corporatifs et fêtes privées. Contactez-nous au (450) 371-0770."}},{"@type":"Question","name":"Comment réserver?","acceptedAnswer":{"@type":"Answer","text":"Par téléphone au (450) 371-0770."}}]}
+</script>
+
+<!-- ─── Schema.org Breadcrumb ─── -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://mcbroue.com/"}]}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,7 +224,7 @@ section{position:relative}
 .door:hover .door-bg{transform:scale(1.06)}
 .door:hover::before{background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.4) 55%,rgba(0,0,0,.85) 100%)}
 .door-content{position:relative;z-index:2;text-align:center}
-.door-icon{width:40px;height:40px;margin:0 auto 1rem;color:var(--gold);stroke:var(--gold);fill:none;stroke-width:1.4}
+.door-icon{font-size:3.6rem;line-height:1;margin:0 auto 1.2rem;display:block;filter:drop-shadow(0 4px 16px rgba(0,0,0,.55))}
 .door-name{font-family:var(--font-display);font-size:2rem;text-transform:uppercase;letter-spacing:.03em;color:var(--text);margin-bottom:.3rem}
 .door-sub{font-family:var(--font-ui);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;justify-content:center}
 .door-sub svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .3s}
@@ -294,7 +365,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
       <div class="door-bg" id="doorEat"></div>
       <span class="door-ph-label">◇ assets/manger.jpg ◇</span>
       <div class="door-content">
-        <svg class="door-icon" viewBox="0 0 24 24"><path d="M3 11h18M5 11V8a3 3 0 013-3h8a3 3 0 013 3v3M4 11h16v5a3 3 0 01-3 3H7a3 3 0 01-3-3v-5z"/></svg>
+        <div class="door-icon" aria-hidden="true">🍔</div>
         <div class="door-name">Manger</div>
         <div class="door-sub">Le menu <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
@@ -303,7 +374,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
       <div class="door-bg" id="doorDrink"></div>
       <span class="door-ph-label">◇ assets/boire.jpg ◇</span>
       <div class="door-content">
-        <svg class="door-icon" viewBox="0 0 24 24"><path d="M6 3h12l-1 9a3 3 0 01-3 2.5h-4A3 3 0 017 12L6 3zM12 14.5V20M8 20h8"/></svg>
+        <div class="door-icon" aria-hidden="true">🍺</div>
         <div class="door-name">Boire</div>
         <div class="door-sub">Bières & cocktails <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
@@ -312,7 +383,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
       <div class="door-bg" id="doorVisit"></div>
       <span class="door-ph-label">◇ assets/visiter.jpg ◇</span>
       <div class="door-content">
-        <svg class="door-icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div class="door-icon" aria-hidden="true">⚓</div>
         <div class="door-name">Visiter</div>
         <div class="door-sub">Heures & adresse <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
@@ -383,7 +454,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 McBroue Resto-Pub</span>
+    <span>© 2026 McBroue Resto-Pub · 329 Rue Victoria, Salaberry-de-Valleyfield · <a href="/politique-de-confidentialite" style="color:var(--text-dim);text-decoration:underline;text-underline-offset:3px">Confidentialité</a> · <a href="#" data-cc="show-preferencesModal" style="color:var(--text-dim);text-decoration:underline;text-underline-offset:3px">Gérer les témoins</a></span>
     <span>Salaberry-de-Valleyfield · Montérégie</span>
   </div>
 </footer>
