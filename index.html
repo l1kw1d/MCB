@@ -199,9 +199,9 @@ nav.scrolled .nav-logo{height:38px;opacity:1}
 
 /* ════════ HERO — logo XL centré + slogan ════════ */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:2rem 1.5rem}
-.hero-bg{position:absolute;inset:-8% 0;z-index:0;background-image:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55) 55%,rgba(0,0,0,.85)),url('assets/hero.jpg');background-size:cover;background-position:center;will-change:transform}
-.hero-bg::after{content:'◇ Déposez votre photo : assets/hero.jpg ◇';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-ui);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,160,110,.18);border:1px dashed rgba(201,160,110,.15);padding:.8rem 1.4rem;white-space:nowrap;z-index:-1}
-.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 50% 45%,rgba(201,160,110,.10),transparent 70%)}
+.hero-bg{position:absolute;inset:-8% 0;z-index:0;background:linear-gradient(135deg,#1A1816 0%,#0F0D0A 50%,#000000 100%);background-size:cover;background-position:center;will-change:transform}
+.hero-bg.has-photo{background-image:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55) 55%,rgba(0,0,0,.85)),var(--hero-photo);background-blend-mode:normal}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 65% at 50% 45%,rgba(201,160,110,.12),transparent 70%)}
 .hero-vignette{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 100% 80% at 50% 50%,transparent 40%,rgba(0,0,0,.5))}
 .hero-content{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center}
 .hero-logo{height:clamp(130px,20vw,210px);width:auto;margin-bottom:1.8rem;filter:drop-shadow(0 6px 30px rgba(0,0,0,.7))}
@@ -590,10 +590,12 @@ const numEl=document.querySelector('.story-badge .num');
 if(numEl){const obj={v:0};ScrollTrigger.create({trigger:numEl,start:'top 90%',once:true,onEnter:()=>gsap.to(obj,{v:100,duration:1.6,ease:'power2.out',onUpdate:()=>{numEl.innerHTML=Math.round(obj.v)+'<span style=\"font-size:1.3rem\">+</span>'}})})}
 
 function tryFill(el,file,wrapSel){const img=new Image();img.onload=()=>{el.style.backgroundImage=`url('${file}')`;const w=el.closest(wrapSel);if(w)w.classList.add('filled')};img.src=file;}
-tryFill(document.getElementById('endroitImg'),'assets/endroit.jpg','.img-ph');
-tryFill(document.getElementById('doorEat'),'assets/manger.jpg','.door');
+/* Hero auto-fill (silencieux si pas de photo : dégradé reste) */
+(function(){const heroBg=document.getElementById('heroBg');const img=new Image();img.onload=()=>{heroBg.style.setProperty('--hero-photo',`url('assets/hero.jpg')`);heroBg.classList.add('has-photo');};img.src='assets/hero.jpg';})();
+tryFill(document.getElementById('endroitImg'),'assets/traiteur-saumon.jpg','.img-ph');
+tryFill(document.getElementById('doorEat'),'assets/traiteur-poulet.jpg','.door');
 tryFill(document.getElementById('doorDrink'),'assets/traiteur-sandwichs.jpg','.door');
-tryFill(document.getElementById('doorVisit'),'assets/salles.jpg','.door');
+tryFill(document.getElementById('doorVisit'),'assets/traiteur-crudites.jpg','.door');
 </script>
 </body>
 </html>
