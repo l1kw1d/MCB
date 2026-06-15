@@ -146,10 +146,23 @@ nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(14px);border-bottom
 nav.scrolled .nav-logo{height:38px;opacity:1}
 .nav-logo img{height:100%;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{font-family:var(--font-ui);font-size:.82rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mut);text-decoration:none;transition:color .25s;position:relative;padding:.3rem 0}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .3s}
-.nav-links a:hover{color:var(--text)}
-.nav-links a:hover::after{width:100%}
+.nav-links > li{position:relative}
+.nav-links a,.nav-links .nav-trigger{font-family:var(--font-ui);font-size:.82rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mut);text-decoration:none;transition:color .25s;position:relative;padding:.3rem 0;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}
+.nav-links a::after,.nav-links .nav-trigger::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav-links a:hover,.nav-links .nav-trigger:hover,.nav-links li:hover > .nav-trigger{color:var(--text)}
+.nav-links a:hover::after,.nav-links li:hover > .nav-trigger::after{width:100%}
+.nav-trigger .caret{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .25s}
+.nav-links li:hover .nav-trigger .caret{transform:rotate(225deg);margin-top:3px}
+/* Dropdown panel */
+.nav-dropdown{position:absolute;top:calc(100% + .8rem);left:50%;transform:translateX(-50%) translateY(-8px);min-width:260px;background:rgba(15,13,10,.97);backdrop-filter:blur(14px);border:1px solid var(--border);border-top:2px solid var(--gold);padding:.6rem 0;list-style:none;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.nav-dropdown::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(45deg);width:14px;height:14px;background:rgba(15,13,10,.97);border-left:1px solid var(--gold);border-top:1px solid var(--gold)}
+.nav-links li:hover .nav-dropdown,.nav-links li:focus-within .nav-dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-dropdown li{display:block}
+.nav-dropdown a{display:block;padding:.85rem 1.5rem;font-size:.74rem;letter-spacing:.18em;color:var(--text-mut)!important;border-left:2px solid transparent;transition:all .2s}
+.nav-dropdown a::after{display:none}
+.nav-dropdown a:hover{color:var(--gold)!important;background:rgba(201,169,110,.06);border-left-color:var(--gold);padding-left:1.8rem}
+.nav-dropdown .nav-d-eyebrow{display:block;font-family:var(--font-ui);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:.7rem 1.5rem .3rem;border-bottom:1px solid var(--border);margin-bottom:.4rem}
+.nav-dropdown .nav-d-sub{display:block;font-size:.62rem;letter-spacing:.06em;color:var(--text-dim);text-transform:none;font-family:var(--font-body);font-style:italic;margin-top:.25rem;line-height:1.3}
 .nav-right{display:flex;align-items:center;gap:1.5rem}
 .nav-social{display:flex;gap:.9rem}
 .nav-social a{color:var(--text-mut);transition:color .25s,transform .25s;display:flex}
@@ -160,8 +173,29 @@ nav.scrolled .nav-logo{height:38px;opacity:1}
 .btn-reserve:hover{transform:translateY(-2px);color:var(--black);border-color:var(--gold)}
 .btn-reserve:hover::before{opacity:1}
 .btn-reserve span{position:relative;z-index:1}
-.burger-menu{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.4rem}
-.burger-menu span{width:26px;height:2px;background:var(--text);transition:.3s}
+.nav-links li.force-open .nav-dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-links li.force-open .nav-trigger .caret{transform:rotate(225deg);margin-top:3px}
+
+/* ════════ MOBILE MENU ════════ */
+.burger-menu{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.4rem;z-index:1002;position:relative}
+.burger-menu span{width:26px;height:2px;background:var(--text);transition:.3s;transform-origin:center}
+.burger-menu.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger-menu.is-open span:nth-child(2){opacity:0}
+.burger-menu.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:999;background:rgba(15,13,10,.98);backdrop-filter:blur(16px);opacity:0;pointer-events:none;transition:opacity .3s;display:flex;flex-direction:column;padding:6rem 2rem 2rem;overflow-y:auto}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu ul{list-style:none}
+.mm-item,.mm-trigger{display:flex;justify-content:space-between;align-items:center;width:100%;padding:1.2rem 0;border-bottom:1px solid var(--border);font-family:var(--font-ui);font-size:1.1rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none;background:none;border-left:none;border-right:none;border-top:none;cursor:pointer;text-align:left}
+.mm-trigger .caret-m{width:10px;height:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .25s}
+.mm-trigger.open .caret-m{transform:rotate(-135deg)}
+.mm-submenu{max-height:0;overflow:hidden;transition:max-height .4s ease;list-style:none}
+.mm-submenu.open{max-height:400px}
+.mm-submenu a{display:block;padding:.9rem 1.2rem;font-family:var(--font-ui);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-mut);text-decoration:none;border-bottom:1px solid var(--border)}
+.mm-submenu a:hover{color:var(--gold)}
+.mm-submenu .mm-sub{display:block;font-family:var(--font-body);font-size:.7rem;letter-spacing:.02em;color:var(--text-dim);text-transform:none;font-style:italic;margin-top:.3rem}
+.mm-footer{margin-top:auto;padding-top:2rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.mm-footer a{font-family:var(--font-body);color:var(--text-mut);text-decoration:none;font-size:.95rem}
+.mm-footer .mm-tel{font-family:var(--font-display);font-size:1.6rem;color:var(--gold)}
 
 /* ════════ HERO — logo XL centré + slogan ════════ */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:2rem 1.5rem}
@@ -299,8 +333,17 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
   <a href="#" class="nav-logo"><img src="assets/logo-mcbroue.png" alt="McBroue Resto-Pub"></a>
   <ul class="nav-links">
     <li><a href="#endroit">L'endroit</a></li>
-    <li><a href="#decouvrir">Découvrir</a></li>
-    <li><a href="#traiteur">Traiteur</a></li>
+    <li>
+      <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></button>
+      <ul class="nav-dropdown" role="menu">
+        <li><span class="nav-d-eyebrow">Au McBroue</span></li>
+        <li><a href="/menu/" role="menuitem">Menu Resto<span class="nav-d-sub">Burgers, poutines, viandes, cocktails</span></a></li>
+        <li><a href="/midi/" role="menuitem">Menu du midi<span class="nav-d-sub">Lundi au vendredi · le menu du jour</span></a></li>
+        <li><span class="nav-d-eyebrow" style="margin-top:.4rem">À emporter / Événements</span></li>
+        <li><a href="/traiteur/" role="menuitem">Menu Traiteur<span class="nav-d-sub">Buffets, boîtes à lunch, sandwichs</span></a></li>
+      </ul>
+    </li>
+    <li><a href="/salles/">Salles &amp; événements</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -310,8 +353,30 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     </div>
     <a href="#contact" class="btn-reserve"><span>Réserver</span></a>
   </div>
-  <button class="burger-menu" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="burger-menu" id="burgerBtn" aria-label="Menu" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
+
+<!-- ════════ MOBILE MENU ════════ -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navigation">
+  <ul>
+    <li><a class="mm-item" href="#endroit">L'endroit</a></li>
+    <li>
+      <button class="mm-trigger">Menu <span class="caret-m"></span></button>
+      <ul class="mm-submenu">
+        <li><a href="/menu/">Menu Resto<span class="mm-sub">Burgers, poutines, viandes, cocktails</span></a></li>
+        <li><a href="/midi/">Menu du midi<span class="mm-sub">Lundi au vendredi · le menu du jour</span></a></li>
+        <li><a href="/traiteur/">Menu Traiteur<span class="mm-sub">Buffets, boîtes à lunch, sandwichs</span></a></li>
+      </ul>
+    </li>
+    <li><a class="mm-item" href="/salles/">Salles &amp; événements</a></li>
+    <li><a class="mm-item" href="#contact">Contact</a></li>
+  </ul>
+  <div class="mm-footer">
+    <a class="mm-tel" href="tel:+14503710770">(450) 371-0770</a>
+    <a href="https://maps.google.com/?q=329+Rue+Victoria+Salaberry-de-Valleyfield" target="_blank" rel="noopener">329 Rue Victoria, Valleyfield</a>
+    <a href="mailto:info@mcbroue.com">info@mcbroue.com</a>
+  </div>
+</div>
 
 <header class="hero">
   <div class="hero-bg" id="heroBg"></div>
@@ -327,7 +392,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     <p class="hero-sub">Le resto-pub de Valleyfield, dans une maison de plus de 100 ans — avec la plus belle <strong>terrasse face au Vieux Canal</strong>.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-lg btn-fill">Réserver une table</a>
-      <a href="#decouvrir" class="btn-lg btn-ghost">Voir le menu</a>
+      <a href="/menu/" class="btn-lg btn-ghost">Voir le menu</a>
     </div>
   </div>
   <div class="hero-info">
@@ -361,31 +426,31 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
 
 <section class="doors" id="decouvrir">
   <div class="doors-grid">
-    <a href="#" class="door" id="doorEatWrap">
+    <a href="/menu/" class="door" id="doorEatWrap">
       <div class="door-bg" id="doorEat"></div>
       <span class="door-ph-label">◇ assets/manger.jpg ◇</span>
       <div class="door-content">
         <div class="door-icon" aria-hidden="true">🍔</div>
         <div class="door-name">Manger</div>
-        <div class="door-sub">Le menu <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="door-sub">Le menu &amp; la carte <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
     </a>
-    <a href="#" class="door" id="doorDrinkWrap">
+    <a href="/traiteur/" class="door" id="doorDrinkWrap">
       <div class="door-bg" id="doorDrink"></div>
-      <span class="door-ph-label">◇ assets/boire.jpg ◇</span>
+      <span class="door-ph-label">◇ assets/traiteur-sandwichs.jpg ◇</span>
       <div class="door-content">
-        <div class="door-icon" aria-hidden="true">🍺</div>
-        <div class="door-name">Boire</div>
-        <div class="door-sub">Bières & cocktails <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="door-icon" aria-hidden="true">🥪</div>
+        <div class="door-name">Traiteur</div>
+        <div class="door-sub">Buffets, boîtes à lunch <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
     </a>
-    <a href="#contact" class="door" id="doorVisitWrap">
+    <a href="/salles/" class="door" id="doorVisitWrap">
       <div class="door-bg" id="doorVisit"></div>
-      <span class="door-ph-label">◇ assets/visiter.jpg ◇</span>
+      <span class="door-ph-label">◇ assets/salles.jpg ◇</span>
       <div class="door-content">
-        <div class="door-icon" aria-hidden="true">⚓</div>
-        <div class="door-name">Visiter</div>
-        <div class="door-sub">Heures & adresse <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="door-icon" aria-hidden="true">🍻</div>
+        <div class="door-name">Vos événements</div>
+        <div class="door-sub">Salles, groupes, 5 à 7 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       </div>
     </a>
   </div>
@@ -416,12 +481,12 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     <a href="tel:+14503710770" class="cta-tel reveal">(450) 371-0770</a>
     <div class="hero-cta reveal" style="margin-top:2.5rem;justify-content:center">
       <a href="tel:+14503710770" class="btn-lg btn-fill">Réserver maintenant</a>
-      <a href="#traiteur" class="btn-lg btn-ghost">Service traiteur</a>
+      <a href="/traiteur/" class="btn-lg btn-ghost">Service traiteur</a>
     </div>
   </div>
 </section>
 
-<footer id="traiteur">
+<footer>
   <div class="footer-grid">
     <div class="footer-col">
       <div class="footer-logo"><img src="assets/logo-mcbroue.png" alt="McBroue Resto-Pub"></div>
@@ -434,8 +499,10 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="#endroit">L'endroit</a>
-      <a href="#decouvrir">Découvrir</a>
-      <a href="#traiteur">Service traiteur</a>
+      <a href="/menu/">Menu Resto</a>
+      <a href="/midi/">Menu du midi</a>
+      <a href="/traiteur/">Service traiteur</a>
+      <a href="/salles/">Salles &amp; événements</a>
       <a href="#contact">Réserver</a>
     </div>
     <div class="footer-col">
@@ -464,8 +531,47 @@ gsap.registerPlugin(ScrollTrigger);
 
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{window.scrollY>60?nav.classList.add('scrolled'):nav.classList.remove('scrolled')});
-document.getElementById('burgerBtn').addEventListener('click',()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}));
 
+/* === Menu mobile === */
+const burgerBtn=document.getElementById('burgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+function toggleMobile(open){
+  if(open===undefined) open=!mobileMenu.classList.contains('open');
+  mobileMenu.classList.toggle('open',open);
+  burgerBtn.classList.toggle('is-open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+burgerBtn.addEventListener('click',()=>toggleMobile());
+mobileMenu.addEventListener('click',e=>{if(e.target===mobileMenu||e.target.closest('a:not(.mm-trigger)'))toggleMobile(false)});
+
+/* === Dropdown desktop tap (pour tablette / souris sans hover) === */
+document.querySelectorAll('.nav-trigger').forEach(t=>{
+  t.addEventListener('click',e=>{
+    e.preventDefault();
+    const open=t.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.nav-trigger').forEach(o=>o.setAttribute('aria-expanded','false'));
+    t.setAttribute('aria-expanded',(!open).toString());
+    t.parentElement.classList.toggle('force-open',!open);
+  });
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.nav-links')){
+    document.querySelectorAll('.nav-trigger').forEach(t=>t.setAttribute('aria-expanded','false'));
+    document.querySelectorAll('.nav-links li').forEach(li=>li.classList.remove('force-open'));
+  }
+});
+
+/* === Dropdown mobile (accordéon) === */
+document.querySelectorAll('.mm-trigger').forEach(t=>{
+  t.addEventListener('click',e=>{
+    e.preventDefault();
+    t.classList.toggle('open');
+    const panel=t.nextElementSibling;
+    if(panel) panel.classList.toggle('open');
+  });
+});
+
+/* === HERO timeline === */
 const tl=gsap.timeline({defaults:{ease:'power3.out'}});
 tl.from('#heroLogo',{y:30,opacity:0,scale:.9,duration:1,delay:.2})
   .from('.hero-eyebrow',{y:20,opacity:0,duration:.7},'-=.4')
@@ -486,8 +592,8 @@ if(numEl){const obj={v:0};ScrollTrigger.create({trigger:numEl,start:'top 90%',on
 function tryFill(el,file,wrapSel){const img=new Image();img.onload=()=>{el.style.backgroundImage=`url('${file}')`;const w=el.closest(wrapSel);if(w)w.classList.add('filled')};img.src=file;}
 tryFill(document.getElementById('endroitImg'),'assets/endroit.jpg','.img-ph');
 tryFill(document.getElementById('doorEat'),'assets/manger.jpg','.door');
-tryFill(document.getElementById('doorDrink'),'assets/boire.jpg','.door');
-tryFill(document.getElementById('doorVisit'),'assets/visiter.jpg','.door');
+tryFill(document.getElementById('doorDrink'),'assets/traiteur-sandwichs.jpg','.door');
+tryFill(document.getElementById('doorVisit'),'assets/salles.jpg','.door');
 </script>
 </body>
 </html>
