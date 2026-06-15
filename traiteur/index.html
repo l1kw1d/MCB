@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr-CA" prefix="og: https://ogp.me/ns#">
 <head>
+<!-- ─── Google Consent Mode v2 — défaut "denied" (Loi 25) ─── -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- ─── Google Analytics 4 (placeholder — remplacer G-9GR8496923 par votre tag réel) ─── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GR8496923"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-9GR8496923', { 'anonymize_ip': true });
+</script>
+
+<!-- ─── CookieConsent (Loi 25) ─── -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+<script type="module" src="/js/cookieconsent-config.js"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Service traiteur Valleyfield | Buffets, boîtes à lunch &amp; soupers spaghetti — McBroue</title>
@@ -710,7 +737,7 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:4rem 2
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 McBroue Resto-Pub · 329 Rue Victoria, Salaberry-de-Valleyfield · <a href="/politique-de-confidentialite">Confidentialité</a></span>
+    <span>© 2026 McBroue Resto-Pub · 329 Rue Victoria, Salaberry-de-Valleyfield · <a href="/politique-de-confidentialite">Confidentialité</a> · <a href="#" data-cc="show-preferencesModal">Gérer les témoins</a></span>
     <span>Salaberry-de-Valleyfield · Montérégie</span>
   </div>
 </footer>
