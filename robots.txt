@@ -1,0 +1,8 @@
+# McBroue Resto-Pub — robots.txt
+# https://mcbroue.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mcbroue.com/sitemap.xml
